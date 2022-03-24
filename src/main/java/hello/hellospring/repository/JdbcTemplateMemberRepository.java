@@ -67,6 +67,6 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
                 member.setName(rs.getString("name"));
                 return member;
             }
-        }
+        };
     }
 }
