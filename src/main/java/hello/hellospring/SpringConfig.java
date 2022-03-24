@@ -18,13 +18,19 @@ public class SpringConfig {
 //        this.dataSource = dataSource;
 //    }
 
-    private EntityManager em;
+//    private EntityManager em;
 
-    @Autowired
-    public SpringConfig(EntityManager em) {
-        this.em = em;
+//    @Autowired
+//    public SpringConfig(EntityManager em) {
+//        this.em = em;
+//    }
+
+    private final MemberRepository memberRepository;
+
+    //cmd+n>constructor로 인젝션 받기
+    public SpringConfig(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
-
 
     //빈 등록할 것이란 의미
     @Bean
